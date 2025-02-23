@@ -73,12 +73,55 @@
 
     <!-- Conteúdo principal -->
     <main>
-        <h1>Seu Carrinho</h1>
-        <p>Seus itens aparecerão aqui.</p>
+        <a href="CArmilaprincipal.html">⬅ Voltar para a Loja</a>
+    <ul id="lista-carrinho"></ul>
+    <p><strong>Total: R$ <span id="total-preco">0.00</span></strong></p>
+    <button onclick="limparCarrinho()">Esvaziar Carrinho</button>
+    
+    <script>
+        function carregarCarrinho() {
+            let carrinho = JSON.parse(localStorage.getItem('carrinho')) || [];
+            let lista = document.getElementById('lista-carrinho');
+            let totalPreco = document.getElementById('total-preco');
+            lista.innerHTML = '';
+            let total = 0;
 
-        <h1>Sugestões baseadas no seu carrinho</h1>
+        carrinho.forEach((item, index) => {
+            let li = document.createElement('li');
+            li.textContent = `${item.nome} - R$${item.preco.toFixed(2)}`;
         
+            let btnRemover = document.createElement('button');
+            btnRemover.textContent = 'Remover';
+            btnRemover.onclick = () => removerItem(index);
+        
+            li.appendChild(btnRemover);
+            lista.appendChild(li);
 
+            total += item.preco; // Soma os preços
+        });
+
+        totalPreco.textContent = total.toFixed(2); // Atualiza o total na tela
+        }
+        
+        function removerItem(index) {
+            let carrinho = JSON.parse(localStorage.getItem('carrinho')) || [];
+            carrinho.splice(index, 1);
+            localStorage.setItem('carrinho', JSON.stringify(carrinho));
+            carregarCarrinho();
+        }
+        
+        function limparCarrinho() {
+            localStorage.removeItem('carrinho');
+            carregarCarrinho();
+            document.getElementById('total-preco').textContent = '0.00';
+
+        }
+        
+        window.onload = carregarCarrinho;
+    </script>
     </main>
+</body>
+</html>
+    
 </body>
 </html>

@@ -3,15 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <title>Loja Carmilla - Moda Alternativa</title>
+
     <style>
-        /* Estilos gerais */
         body {
             margin: 0;
             font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
         }
 
-        /* Cabeçalho */
         header {
             background-color: #180B0B;
             padding: 10px 20px;
@@ -59,7 +62,63 @@
 
         /* Conteúdo principal */
         main {
+            flex: 1;
             padding: 20px;
+        }
+
+        .produtos-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: space-around;
+            padding: 100px 20px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .produto {
+            text-align: center;
+            transition: 0.3s;
+        }
+
+        .produto:hover {
+            color: red;
+            cursor: pointer;
+        }
+
+        .produto img {
+            width: 220px;
+            height: 220px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        .preco {
+            font-size: 18px;
+            font-weight: 600;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px 0;
+            font-size: 14px;
+        }
+
+        footer .paginacao {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .seta {
+            font-size: 24px;
+            cursor: pointer;
+            transition: color 0.3s;
+        }
+
+        .seta:hover {
+            color: #E23835; /* Cor vermelha ao passar o mouse */
         }
     </style>
 </head>
@@ -87,9 +146,55 @@
 
     <!-- Conteúdo principal -->
     <main>
-        <h1>Bem-vindo à Carmilla!</h1>
-        <p>Explore nossa coleção incrível de produtos.</p>
+        <div class="produtos-container">
+            <div class="produto">
+                <img src="img/produto1.jpg" alt="Camiseta Black at Halloween" />
+                <p>Camiseta Black at Halloween</p>
+                <p class="preco">R$70</p>
+                <button onclick="adicionarAoCarrinho('Camiseta Black at Halloween', 70)">Adicionar ao Carrinho</button>
+        </div>
+            </div>
+
+            <div class="produto">
+                <img src="img/produto2.png" alt="Camiseta Friday the 13th" />
+                <p>Camiseta Friday the 13th</p>
+                <p class="preco">R$85</p>
+                <button onclick="adicionarAoCarrinho('Camiseta Friday the 13th', 85)">Adicionar ao Carrinho</button>
+            </div>
+
+            <div class="produto">
+                <img src="img/produto3.png" alt="Camiseta Jason Voorhees" />
+                <p>Camiseta Jason Voorhees</p>
+                <p class="preco">R$75</p>
+                <button onclick="adicionarAoCarrinho('Camiseta Jason Voorhees', 75)">Adicionar ao Carrinho</button>
+            </div>
+
+            <div class="produto">
+                <img src="img/produto4.png" alt="Vestido Preto em Veludo" />
+                <p>Vestido Preto em Veludo</p>
+                <p class="preco">R$70</p>
+                <button onclick="adicionarAoCarrinho('Vestido Preto em Veludo', 70)">Adicionar ao Carrinho</button>
+            </div>
+        </div>
         
+        <footer>
+            <div class="paginacao">
+                <span class="seta">◄</span>
+                <p>Página 1 de 1</p>
+                <span class="seta">►</span>
+            </div>
+        </footer>
+
     </main>
+
+    <script>
+        function adicionarAoCarrinho(nome, preco) {
+            let carrinho = JSON.parse(localStorage.getItem('carrinho')) || [];
+            carrinho.push({ nome, preco });
+            localStorage.setItem('carrinho', JSON.stringify(carrinho));
+            alert('Produto adicionado ao carrinho!');
+        }
+    </script>
+    
 </body>
 </html>
