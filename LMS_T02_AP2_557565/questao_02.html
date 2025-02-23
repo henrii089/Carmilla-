@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .div {
+        color:rgb(253, 232, 232);
+        padding: 5px;
+    }
+    .input {
+        background-color: aliceblue;
+    }
+    #aa{
+        background-color: blue;
+        display: block;
+        visibility: visible;
+    }
+    #bb{
+        background-color: rgb(149, 0, 255);
+        display: block;
+        visibility: visible;
+    }
+    #cc{
+        background-color: rgb(255, 0, 230);
+        display: block;
+        visibility: visible;
+    }
+    #dd{
+        background-color: rgb(255, 0, 132);
+        display: block;
+        visibility: visible;
+    }
+    #ee{
+        background-color: rgb(255, 0, 64);
+        display: block;
+        visibility: visible;
+    }
+
+</style>
+<body>
+    <div class="div" id="aa">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex sint placeat ab a quis modi dolorem dignissimos maiores corporis quaerat, veniam incidunt repellendus ea vitae nam ad nostrum beatae maxime.
+    </div>
+    <div class="div" id="bb">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sunt labore eos vel nobis ipsam maiores quas atque hic maxime dolores, facere obcaecati iure aliquam accusantium natus quam aperiam rerum quis.
+    </div>
+    <div class="div" id="cc">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. A, nulla soluta quas error harum veritatis molestias, recusandae vero sit, ipsam tempore libero fugit iure voluptate laborum quia amet nesciunt doloremque!
+    </div>
+    <div class="div" id="dd">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vitae, alias magnam! Magni alias blanditiis autem aliquid a, eum, quo quod itaque exercitationem facere eaque veritatis obcaecati sint ea voluptatum sapiente.
+    </div>
+    <div class="div " id="ee">
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Similique, veniam minima beatae facere voluptatum nam voluptas asperiores corrupti vitae sunt impedit sequi repudiandae corporis est quibusdam optio sed quo facilis?
+    </div>
+    <input type="number" class="input" min="1" max="5">
+
+    <script>
+
+
+function leitor() {
+    let valor = document.getElementsByClassName('input').value;
+    if(valor = 1) {
+        document.getElementById('aa') = 'hidden'
+
+    }
+}
+    </script>
+</body>
+</html>

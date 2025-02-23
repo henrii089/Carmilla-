@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carmilla - Sua Loja</title>
+    <style>
+        /* Estilos gerais */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Cabeçalho */
+        header {
+            background-color: #180B0B;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header .logo {
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        header .search-bar {
+            flex-grow: 1;
+            max-width: 400px;
+            margin: 0 40px;
+        }
+
+        header .search-bar input {
+            width: 100%;
+            padding: 8px;
+            border: none;
+            border-radius: 4px;
+        }
+
+        header .icons {
+            display: flex;
+            gap: 20px;
+        }
+
+        header .icons a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        /* Faixa vermelha */
+        .red-stripe {
+            background-color: #E23835;
+            height: 10px;
+            width: 100%;
+        }
+
+        /* Conteúdo principal */
+        main {
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Cabeçalho -->
+    <header>
+        <div class="logo">Carmilla</div>
+        <div class="search-bar">
+            <input type="text" placeholder="Buscar produtos...">
+        </div>
+        <div class="icons">
+            <a href="#">Carrinho</a>
+            <a href="#">Login</a>
+        </div>
+    </header>
+
+    <!-- Faixa vermelha -->
+    <div class="red-stripe"></div>
+
+    <!-- Conteúdo principal -->
+    <main>
+        <h1>Bem-vindo à Carmilla!</h1>
+        <p>Explore nossa coleção incrível de produtos.</p>
+    </main>
+</body>
+</html>

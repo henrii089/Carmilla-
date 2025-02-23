@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Carmilla</title>
+    <style>
+        body {
+            background-image: url(img/Morcegos.png);
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        header {
+            background-color: #180B0B;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        header .logo {
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        header .search-bar {
+            flex-grow: 1;
+            margin: 0 20px;
+            max-width: 400px;
+        }
+        header .search-bar input {
+            width: 100%;
+            padding: 8px;
+            border: none;
+            border-radius: 4px;
+        }
+        header .icons {
+            display: flex;
+            gap: 20px;
+        }
+        header .icons a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+        }
+        .red-stripe {
+            background-color: #E23835;
+            height: 10px;
+            width: 100%;
+        }
+        main {
+            padding: 20px;
+        }
+        .login-form {
+            max-width: 300px;
+            margin: 0 auto;
+            text-align: center;
+            background-color: white;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+
+        }
+        .login-form input {
+            width: 85%;
+            padding: 10px;
+            margin: 15px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+
+        }
+        .login-form button {
+            background-color: #E23835;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin: 20px
+        }
+        .direitos{
+            justify-content: center;
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;               
+        }
+        .msg-erro{
+            color: red;
+            font-size: 0.8em;
+            display: none;
+            position: absolute;
+            left: 60;
+        }
+        .msg-erroS{
+            color: red;
+            font-size: 0.8em;
+            display: none;
+            position: absolute;
+            left: 60;
+        }
+    </style>
+</head>
+<body>
+    <!-- Cabeçalho -->
+    <header>
+        <div class="logo">
+            <a href="CArmilaprincipal.html">
+            <img src="img/logocarmilla.png" alt="loja carmilla" style="width:167px;height:40px;">
+            </a>
+        </div>
+        <div class="search-bar">
+            <input type="text" placeholder="Buscar produtos...">
+        </div>
+        <div class="icons">
+            <a href="carrinho.html">Carrinho</a>
+            <a href="login.html">Login</a>
+        </div>
+    </header>
+
+    <!-- Faixa vermelha -->
+    <div class="red-stripe"></div>
+
+    <!-- Conteúdo principal -->
+    <main>
+        <div class="login-form">
+            <img src="img/Ilustração - perfil.png" width="200px">
+            <h1>Login</h1>
+
+<form id = "formEmail">
+            <span id="mensagemErro" class="msg-erro"></span>
+            <input type="text" id="email" placeholder="E-mail">
+        </form>
+
+<form id = "formSenha">
+            <span id="mensagemErroS" class="msg-erroS"></span>
+            <input type="password" id="senha" placeholder="Senha">
+        </form>
+
+            <button onclick="validarForm()">Entrar</button>
+       
+        </div>
+        <div class="direitos">
+            <br>
+            <i>Carmilla.com. Todos os direitos reservados <br/>
+                LojaCarmilla@yahoo.com
+            </i>
+        </div>
+      
+    </main>
+    <script>
+        // JavaScript para validação
+        function validarForm() {
+            var email = document.getElementById('email').value;
+            var mensagemErro = document.getElementById('mensagemErro');
+            var senha = document.getElementById('senha').value;
+            var mensagemErroS = document.getElementById('mensagemErroS')
+            
+            var valido = true
+
+            if (email === "") {
+                mensagemErro.textContent = "Por favor, insira seu e-mail.";
+                mensagemErro.style.display = "inline";
+                valido = false; // Impede o envio do formulário
+            } else if (email.length < 10) {
+                mensagemErro.textContent = "E-mail inválido";
+                mensagemErro.style.display = "inline";
+                valido = false; // Impede o envio do formulário
+            }  else {
+                mensagemErro.style.display = "none"; // Oculta a mensagem de erro
+                valido = true; // Permite o envio do formulário
+            } 
+
+             if (senha === "") {
+                mensagemErroS.textContent = "Por favor, insira sua senha.";
+                mensagemErroS.style.display = "inline";
+                valido = false; // Impede o envio do formulário
+            } else if (senha.length < 8) {
+                mensagemErroS.textContent = "Senha deve ter mais que 7 caracteres.";
+                mensagemErroS.style.display = "inline";
+                valido = false; // Impede o envio do formulário
+            }  else {
+                mensagemErroS.style.display = "none"; // Oculta a mensagem de erro
+                valido = true; // Permite o envio do formulário
+            }
+        
+
+            if (valido === true) {
+                document.getElementById('formEmail').submit()
+                document.getElementById('formSenha').submit()
+            }
+        }
+    </script>
+</body>
+</html>

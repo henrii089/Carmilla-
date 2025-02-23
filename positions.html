@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Propriedades CSS de Position</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f4f8f5;
+            color: #333;
+            padding: 100px;
+        }
+        h1, h2 {
+            color: #2d6a4f;
+        }
+        .example {
+            margin: 20px 0;
+            padding: 10px;
+            border: 1px solid #b7e4c7;
+            background-color: #d8f3dc;
+        }
+        .relative {
+            position: relative;
+            top: 20px;
+            left: 30px;
+            background-color: #95d5b2;
+            padding: 10px;
+        }
+        .absolute {
+            position: absolute;
+            top: 50px;
+            left: 50px;
+            background-color: #74c69d;
+            padding: 10px;
+        }
+        .fixed {
+            position: fixed;
+            bottom: 10px;
+            right: 10px;
+            background-color: #40916c;
+            color: white;
+            padding: 10px;
+        }
+        .sticky-container {
+            height: 200px;
+            overflow: auto;
+            border: 2px solid #52b788;
+            padding: 10px;
+        }
+        .sticky {
+            position: sticky;
+            top: 0;
+            background-color: #1b4332;
+            color: white;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Propriedades de Position no CSS</h1>
+    <p>Esta página demonstra as diferenças entre as propriedades de posição do CSS: <strong>relative</strong>, <strong>absolute</strong>, <strong>fixed</strong> e <strong>sticky</strong>.</p>
+    
+    <h2>Exemplo de Posição: Relative</h2>
+    <div class="example">
+        <p>A posição <strong>relative</strong> move o elemento em relação à sua posição original.</p>
+        <div class="relative">Este elemento está usando <strong>position: relative</strong>.</div>
+    </div>
+    
+    <h2>Exemplo de Posição: Absolute</h2>
+    <div class="example">
+        <p>A posição <strong>absolute</strong> posiciona o elemento em relação ao elemento pai mais próximo com posição definida.</p>
+        <div class="absolute">Este elemento está usando <strong>position: absolute</strong>.</div>
+    </div>
+    
+    <h2>Exemplo de Posição: Fixed</h2>
+    <div class="example">
+        <p>A posição <strong>fixed</strong> fixa o elemento em relação à janela do navegador, independentemente de rolagem.</p>
+        <div class="fixed">Este elemento está usando <strong>position: fixed</strong>.</div>
+    </div>
+    
+    <h2>Exemplo de Posição: Sticky</h2>
+    <div class="example sticky-container">
+        <p>A posição <strong>sticky</strong> permite que o elemento se comporte como <strong>relative</strong> até atingir um ponto específico na rolagem, onde ele se torna fixo.</p>
+        <div class="sticky">Este elemento está usando <strong>position: sticky</strong>.</div>
+        <p>Role para ver o comportamento da posição sticky.</p>
+        <p>Mais conteúdo para demonstrar rolagem...</p>
+        <p>Continuando o conteúdo...</p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   
+</head>
+<style>
+     .img{
+        width: 30px;
+    }
+</style>
+<body>
+    <input type="number">
+    <input type="number">
+    <table>
+    <tr style = "padding: 20px;
+    background-color: mediumspringgreen;"
+    align=center">
+        <td>Nome
+        </td>
+        <td class="img">
+        </td>
+    </tr>
+</table>
+
+<script>
+    const fetchPokemon = async (pokemon) => {
+    const apiResponse = await fetch(`https://pokeapi.co/api/v2/pokemon/${pokemon}`)
+
+    if (apiResponse.status == 200) {
+        const data = await apiResponse.json();
+        return data;
+    }
+}
+</script>
+
+</body>
+</html>

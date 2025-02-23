@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questão 1</title>
+    <style>
+        .cabecalho {
+            background-color: beige;
+            font-family: 'Courier New', Courier, monospace;
+            font-weight: bolder;
+            font-size: 120%;
+        }
+
+        .header {
+            color: beige;
+            background-color: rgb(146, 110, 62);
+        }
+        .footer {
+            text-align: center;
+            font-weight: bold;
+            padding-top: 5%;
+            background-color: bisque;
+        }
+        .main {
+            background-color: beige;
+            flex-direction: row;
+        }
+        .button {
+            background-color: brown;
+            color:beige
+        }
+        #golden {
+            display: block;
+            visibility: visible;
+        }
+        #poodle {
+            display: block;
+            visibility: hidden;
+        }
+    </style>
+</head>
+<body>
+    
+    <nav class="cabecalho">
+        Doguinhos.com
+        <a href="link">Início</a>
+        <a href="link2">Sobre</a>
+        <a href="link3">Contato</a>
+    </nav>
+    
+    <main class="main">
+    <header class="header">Raças de Cachorros mais fofas!</header>
+
+    <br>
+
+    <button onclick= "voltagolden()" class= "button">Golden Retriever</button>
+    <button onclick= "saigolden()" class= "button">Poodle</button>
+    <section>
+    <div id="golden">
+    <article>
+    <h3>Golden Retriever</h3>
+    <img src="https://imgs.search.brave.com/DSRa3eh4UE-Gw8VHMzx1H5Yett7WlUPrBmIJiGXs1is/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93d3cu/cGV0bG92ZS5jb20u/YnIvc3RhdGljL3Bl/dHMvZG9nLzQ4ODgx/L2hkXzE1MzE5NTI0/NDYtcGhvdG8uanBn" width="300">
+    
+    
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum, suscipit? Officia, quisquam! Nesciunt harum veritatis quidem qui itaque explicabo nihil ipsa illum, officia reprehenderit delectus veniam, nisi ratione, nostrum sed!
+    </article>
+</div>
+
+<div id="poodle">
+    <article>
+    <h3>Poodle</h3>
+        <img src="https://imgs.search.brave.com/he47BnikSERfC7L-luuyphqnb9lqNijkpNor0WSJ-40/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWcu/ZnJlZXBpay5jb20v/Zm90b3MtcHJlbWl1/bS9jYW8tcG9vZGxl/LWVtLWZ1bmRvLW1h/cnJvbV8xNTc5MTct/MzAyLmpwZz9zZW10/PWFpc19oeWJyaWQ" width="300">
+        
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum, suscipit? Officia, quisquam! Nesciunt harum veritatis quidem qui itaque explicabo nihil ipsa illum, officia reprehenderit delectus veniam, nisi ratione, nostrum sed!
+        </article>
+    </div>
+   
+    </section>
+    </main>
+    
+    <footer class="footer">
+        doguinhos.com all rights reserved
+        doguinhos@yahoo
+    </footer>
+    <script>
+         const goldenR = document.getElementById("golden");
+         const poodleT = document.getElementById("poodle");
+
+        function voltagolden() {
+            goldenR.style.visibility ="visible"
+            poodleT.style.visibility ="hidden"
+        }
+        function saigolden() {
+                goldenR.style.visibility = "hidden"
+                if(goldenR.style.visibility = "hidden") {
+                    poodleT.style.visibility = "visible"
+                } 
+                
+        }
+    </script>
+</body>
+</html>

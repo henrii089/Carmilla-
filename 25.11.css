@@ -1,0 +1,27 @@
+ .flex-container {
+    background-color: rgb(54, 54, 174);
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* todas as divs */
+.flex-container .box{
+    display: flex;
+    flex-direction: row;
+    margin: 5px;
+    background-color: rgb(188, 193, 34);
+}
+.flex-container .box  div {
+    background-color: rgb(196, 196, 224);
+    width: 50px;
+    height: 50px;
+    /*colocar a margem para que elas não fiquem coladas 
+    umas nas outras 
+    */
+    margin: 10px;
+    font-size: xx-large;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

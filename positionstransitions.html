@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Transitions Explicado</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            line-height: 1.6;
+            background-color: #f2f2f2;
+            color: #333;
+        }
+        h1, h2 {
+            color: #4CAF50;
+        }
+        .example {
+            margin: 25px 0;
+        }
+        .box, .box-opacity, .box-border, .box-rotate {
+            width: 100px;
+            height: 100px;
+            background-color: #4CAF50;
+            margin: 10px 0;
+            transition: all 0.5s ease;
+        }
+        .box:hover {
+            transform: scale(1.2);
+            background-color: #8BC34A;
+        }
+        .box-opacity {
+            opacity: 1;
+        }
+        .box-opacity:hover {
+            opacity: 0.5;
+        }
+        .box-border {
+            border: 2px solid transparent;
+        }
+        .box-border:hover {
+            border-color: #4a89d7;
+            border-width: 5px;
+        }
+        .box-rotate {
+            transform: rotate(0deg);
+        }
+        .box-rotate:hover {
+            transform: rotate(45deg);
+        }
+        code {
+            background-color: #e8e8e8;
+            padding: 2px 4px;
+            border-radius: 4px;
+            font-family: monospace;
+        }
+    </style>
+</head>
+<body>
+    <h1>Entendendo CSS Transitions</h1>
+    <p>As <strong>CSS Transitions</strong> permitem que você adicione animações suaves quando as propriedades CSS de um elemento mudam. Isso melhora a experiência do usuário, tornando mudanças visuais mais agradáveis.</p>
+
+    <h2>Exemplo 1: Transição de Escala e Cor</h2>
+    <div class="example">
+        <div class="box"></div>
+        <p><strong>Código CSS:</strong></p>
+        <pre>
+.box {
+    width: 100px;
+    height: 100px;
+    background-color: #4CAF50;
+    transition: all 0.5s ease;
+}
+.box:hover {
+    transform: scale(1.2);
+    background-color: #8BC34A;
+}
+        </pre>
+    </div>
+
+    <h2>Exemplo 2: Transição de Opacidade</h2>
+    <div class="example">
+        <div class="box-opacity"></div>
+        <p><strong>Código CSS:</strong></p>
+        <pre>
+.box-opacity {
+    opacity: 1;
+    transition: opacity 0.5s ease;
+}
+.box-opacity:hover {
+    opacity: 0.5;
+}
+        </pre>
+    </div>
+
+    <h2>Exemplo 3: Transição de Borda</h2>
+    <div class="example">
+        <div class="box-border"></div>
+        <p><strong>Código CSS:</strong></p>
+        <pre>
+.box-border {
+    border: 2px solid transparent;
+    transition: border-color 0.5s ease, border-width 0.5s ease;
+}
+.box-border:hover {
+    border-color: #8BC34A;
+    border-width: 5px;
+}
+        </pre>
+    </div>
+
+    <h2>Exemplo 4: Transição de Rotação</h2>
+    <div class="example">
+        <div class="box-rotate"></div>
+        <p><strong>Código CSS:</strong></p>
+        <pre>
+.box-rotate {
+    transform: rotate(0deg);
+    transition: transform 0.5s ease;
+}
+.box-rotate:hover {
+    transform: rotate(45deg);
+}
+        </pre>
+    </div>
+
+    <h2>Resumo</h2>
+    <p>Com esses exemplos, você viu como aplicar <strong>CSS Transitions</strong> a diferentes propriedades como escala, opacidade, borda e rotação. Teste os exemplos acima e explore como <code>transition</code> pode tornar seus sites mais dinâmicos e interativos!</p>
+</body>
+</html>
